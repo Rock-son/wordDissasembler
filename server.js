@@ -37,7 +37,7 @@ app.use(helmet_csp({
 }));
 app.use(function(req, res, next) {
     res.set({
-    "Access-Control-Allow-Origin" : "'self'",
+    "Access-Control-Allow-Origin" : "https://word-dissasembler.herokuapp.com/",
     "Access-Control-Allow-Headers" : "Origin, X-Requested-With, content-type, Accept"
     });
     app.disable('x-powered-by');
