@@ -31,13 +31,13 @@ app.use(helmet_csp({
         defaultSrc: ["'self'"],
         scriptSrc: ["'self'"],
         styleSrc: ["'self'"],
-        fontSrc: ["'self'", "http://localhost:3000/*"],
+        fontSrc: ["'self'"],
         sandbox: ['allow-forms', 'allow-scripts']
         }
 }));
 app.use(function(req, res, next) {
     res.set({
-    "Access-Control-Allow-Origin" : "*",
+    "Access-Control-Allow-Origin" : "'self'",
     "Access-Control-Allow-Headers" : "Origin, X-Requested-With, content-type, Accept"
     });
     app.disable('x-powered-by');
@@ -46,7 +46,7 @@ app.use(function(req, res, next) {
 
 app.get("/", function(req, res) {
 
-    res.render("index", {matches: null});
+    res.render("index", {matches: 0});
 });
 
 

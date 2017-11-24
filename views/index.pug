@@ -17,7 +17,7 @@ html(lang="en")
                         input(class="container__form__txtinput" type="text" name="wordUpload" placeholder="vpiši iskalni niz")
                         br
                         input(class="container__form__submit" type="submit" name="submit")                        
-                        if matches != null                        
+                        if matches != null && nr !== 0                     
                             br
                             p.container__resultLabel Najdenih 
                                 span.coreNr #{nr} 
@@ -27,6 +27,8 @@ html(lang="en")
                             .container__form__ul
                                 ul.container__results
                                     each val in matches
-                                        li= val
+                                        li= val                            
+                        else 
+                            p.container__resultLabel Ni najdenih rezultatov oz. napačen vnos!
             p.codedby Coded By 
                 a(href="https://codepen.io/Roky/full/YqGqWg") Roky

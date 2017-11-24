@@ -3,6 +3,9 @@ const words = require("./words");
 
 module.exports.getWords = function(alphabet) {
 
+    const escapeStr = new RegExp(/[\W]/, "g");
+    if (escapeStr.test(alphabet)) {return [];}
+
     const abcLen = alphabet.length;
 
     return words.filter((word) => {
