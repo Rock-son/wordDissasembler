@@ -108,10 +108,9 @@ body {
 }
 .container__form__txtinput {
     margin-top: 2%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1rem;
     padding: 10px;
-    line-height: 10px;
     border-radius: 5px;
     font-family: "Vollkorn SC", Colibri, Arial, sans-serif; 
 }

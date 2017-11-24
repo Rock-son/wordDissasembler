@@ -16,8 +16,12 @@ html(lang="en")
                     legend.container__form__legend
                         input(class="container__form__txtinput" type="text" name="wordUpload" placeholder="vpiši iskalni niz")
                         br
-                        input(class="container__form__submit" type="submit" name="submit")                        
-                        if matches != null && nr !== 0                     
+                        input(class="container__form__submit" type="submit" name="submit")
+                        if matches == "no result" 
+                            p.container__resultLabel Poizvedba ni vrnila rezultatov!
+                        else if matches == "error" 
+                            p.container__resultLabel Napačen vnos, pazite na posebne znake!
+                        else if matches != null && nr !== -1
                             br
                             p.container__resultLabel Najdenih 
                                 span.coreNr #{nr} 
@@ -27,8 +31,6 @@ html(lang="en")
                             .container__form__ul
                                 ul.container__results
                                     each val in matches
-                                        li= val                            
-                        else 
-                            p.container__resultLabel Ni najdenih rezultatov oz. napačen vnos!
+                                        li= val
             p.codedby Coded By 
                 a(href="https://codepen.io/Roky/full/YqGqWg") Roky

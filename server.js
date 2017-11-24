@@ -46,7 +46,7 @@ app.use(function(req, res, next) {
 
 app.get("/", function(req, res) {
 
-    res.render("index", {matches: 0});
+    res.render("index", {matches: 0, nr: -1});
 });
 
 
@@ -62,7 +62,14 @@ app.get("/public/assets/fonts/*", function(req, res) {
 app.post("/wordLookup", function(req, res) {
     
     const matches = dictionaire.getWords(req.body.wordUpload);
-    res.render("index", {matches, nr: matches.length, word: req.body.wordUpload});
+    // when no search was found
+    if (matches.length === 0) {
+        res.render("index", {matches: "no result"});
+    } else if (matches[0] === "There was an error") {
+        res.render("index", {matches: "error"});
+    } else {
+        res.render("index", {matches, nr: matches.length, word: req.body.wordUpload});
+    }
 });
 
 
