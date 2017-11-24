@@ -1,0 +1,18 @@
+{
+  "name": "slovar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "RZ",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "helmet": "^3.9.0",
+    "helmet-csp": "^2.6.0",
+    "normalize.css": "^7.0.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}

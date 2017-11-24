@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+    head
+        title Besedne uganke
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="description" content="learning projects freeCodeCamp")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(type="text/css" rel="stylesheet" href="./assets/styles/style.css")
+        link(type="text/css" rel="stylesheet" href="./assets/styles/normalize.css")
+    body        
+        .container
+            h1.main-header Razstavljanje Besed
+            form(class="container__form" action="/wordLookup" method="post" enctype="application/x-www-form-urlencoded")
+                fieldset.container__form__fieldset 
+                    legend.container__form__legend
+                        input(class="container__form__txtinput" type="text" name="wordUpload" placeholder="vpiši iskalni niz")
+                        br
+                        input(class="container__form__submit" type="submit" name="submit")                        
+                        if matches != null                        
+                            br
+                            p.container__resultLabel Najdenih 
+                                span.coreNr #{nr} 
+                                span besed v 
+                                span.coreWord "#{word.toUpperCase()}":                
+                            br
+                            .container__form__ul
+                                ul.container__results
+                                    each val in matches
+                                        li= val
+            p.codedby Coded By 
+                a(href="https://codepen.io/Roky/full/YqGqWg") Roky
