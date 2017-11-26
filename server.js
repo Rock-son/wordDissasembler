@@ -62,7 +62,6 @@ app.get("/public/assets/fonts/*", function(req, res) {
 app.post("/wordLookup", function(req, res) {
     const isMobile = /\((.*)\)/.exec(req.headers["user-agent"])[0].replace(/\(/, "").replace(/\)/, "").indexOf("Android") > -1;
     
-    console.log(isMobile);
     const matches = dictionaire.getWords(req.body.wordUpload);
     // when no search was found
     if (matches.length === 0) {
