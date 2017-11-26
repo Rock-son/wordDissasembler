@@ -60,15 +60,16 @@ app.get("/public/assets/fonts/*", function(req, res) {
 
 
 app.post("/wordLookup", function(req, res) {
-    
+    const isMobile = /\((.*)\)/.exec(req.headers["user-agent"])[0].replace(/\(/, "").replace(/\)/, "").indexOf("Android") > -1;
+    console.log(isMobile);
     const matches = dictionaire.getWords(req.body.wordUpload);
     // when no search was found
     if (matches.length === 0) {
-        res.render("index", {matches: "no result"});
+        res.render("index", {matches: "no result", isMobile});
     } else if (matches[0] === "There was an error") {
-        res.render("index", {matches: "error"});
+        res.render("index", {matches: "error", isMobile});
     } else {
-        res.render("index", {matches, nr: matches.length, word: req.body.wordUpload});
+		res.render("index", { matches, nr: matches.length, word: req.body.wordUpload, isMobile });		
     }
 });
 

@@ -1,0 +1,170 @@
+::after, ::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* roboto-condensed-regular - latin */
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/public/assets/fonts/RobotoCondensed/roboto-condensed-v16-latin-regular.eot");
+    /* IE9 Compat Modes */
+    src: local("Roboto Condensed"), local("RobotoCondensed-Regular"), url("/public/assets/fonts/RobotoCondensed/roboto-condensed-v16-latin-regular.eot?#iefix") format("embedded-opentype"), url("/public/assets/fonts/RobotoCondensed/roboto-condensed-v16-latin-regular.woff2") format("woff2"), url("/public/assets/fonts/RobotoCondensed/roboto-condensed-v16-latin-regular.woff") format("woff"), url("/public/assets/fonts/RobotoCondensed/roboto-condensed-v16-latin-regular.ttf") format("truetype"), url("/public/assets/fonts/RobotoCondensed/roboto-condensed-v16-latin-regular.svg#RobotoCondensed") format("svg");
+    /* Legacy iOS */ }
+  
+  /* advent-pro-regular - latin */
+  @font-face {
+    font-family: 'Advent Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/public/assets/fonts/AdventPro/advent-pro-v7-latin-regular.eot");
+    /* IE9 Compat Modes */
+    src: local("Advent Pro Regular"), local("AdventPro-Regular"), url("/public/assets/fonts/AdventPro/advent-pro-v7-latin-regular.eot?#iefix") format("embedded-opentype"), url("/public/assets/fonts/AdventPro/advent-pro-v7-latin-regular.woff2") format("woff2"), url("/public/assets/fonts/AdventPro/advent-pro-v7-latin-regular.woff") format("woff"), url("/public/assets/fonts/AdventPro/advent-pro-v7-latin-regular.ttf") format("truetype"), url("/public/assets/fonts/AdventPro/advent-pro-v7-latin-regular.svg#AdventPro") format("svg");
+    /* Legacy iOS */ }
+  
+  /* abeezee-regular - latin */
+  @font-face {
+    font-family: 'ABeeZee';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/public/assets/fonts/Abeezee/abeezee-v11-latin-regular.eot");
+    /* IE9 Compat Modes */
+    src: local("ABeeZee Regular"), local("ABeeZee-Regular"), url("/public/assets/fonts/Abeezee/abeezee-v11-latin-regular.eot?#iefix") format("embedded-opentype"), url("/public/assets/fonts/Abeezee/abeezee-v11-latin-regular.woff2") format("woff2"), url("/public/assets/fonts/Abeezee/abeezee-v11-latin-regular.woff") format("woff"), url("/public/assets/fonts/Abeezee/abeezee-v11-latin-regular.ttf") format("truetype"), url("/public/assets/fonts/Abeezee/abeezee-v11-latin-regular.svg#ABeeZee") format("svg");
+    /* Legacy iOS */ }
+  
+  /* vollkorn-sc-regular - latin */
+  @font-face {
+    font-family: 'Vollkorn SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url("/public/assets/fonts/VollkornSC/vollkorn-sc-v1-latin-regular.eot");
+    /* IE9 Compat Modes */
+    src: local("Vollkorn SC Regular"), local("VollkornSC-Regular"), url("/public/assets/fonts/VollkornSC/vollkorn-sc-v1-latin-regular.eot?#iefix") format("embedded-opentype"), url("/public/assets/fonts/VollkornSC/vollkorn-sc-v1-latin-regular.woff2") format("woff2"), url("/public/assets/fonts/VollkornSC/vollkorn-sc-v1-latin-regular.woff") format("woff"), url("/public/assets/fonts/VollkornSC/vollkorn-sc-v1-latin-regular.ttf") format("truetype"), url("/public/assets/fonts/VollkornSC/vollkorn-sc-v1-latin-regular.svg#VollkornSC") format("svg");
+    /* Legacy iOS */ }
+
+    
+body {
+    font-size: 1rem;
+    background-color: #bbb;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c8d7eb+10,99b5db+13,afc7e8+43,bed0ea+51,a6c0e3+51,d2dfed+66,afc7e8+70,bad0ef+81,799bc8+100 */
+    background: rgb(200,215,235); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(200,215,235,1) 10%, rgba(153,181,219,1) 13%, rgba(175,199,232,1) 43%, rgba(190,208,234,1) 51%, rgba(166,192,227,1) 51%, rgba(210,223,237,1) 66%, rgba(175,199,232,1) 70%, rgba(186,208,239,1) 81%, rgba(121,155,200,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(200,215,235,1) 10%,rgba(153,181,219,1) 13%,rgba(175,199,232,1) 43%,rgba(190,208,234,1) 51%,rgba(166,192,227,1) 51%,rgba(210,223,237,1) 66%,rgba(175,199,232,1) 70%,rgba(186,208,239,1) 81%,rgba(121,155,200,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(200,215,235,1) 10%,rgba(153,181,219,1) 13%,rgba(175,199,232,1) 43%,rgba(190,208,234,1) 51%,rgba(166,192,227,1) 51%,rgba(210,223,237,1) 66%,rgba(175,199,232,1) 70%,rgba(186,208,239,1) 81%,rgba(121,155,200,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c8d7eb', endColorstr='#799bc8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */    
+}
+.container {
+    min-height: 100vh;
+    width: 75vw;
+    overflow: auto;
+    margin: 0 auto;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6db3f2+0,3690f0+32,54a3ee+61,1e69de+100 */
+    background: rgb(109,179,242); /* Old browsers */
+    background: -moz-linear-gradient(-45deg, rgba(109,179,242,1) 0%, rgba(54,144,240,1) 32%, rgba(84,163,238,1) 61%, rgba(30,105,222,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(109,179,242,1) 0%,rgba(54,144,240,1) 32%,rgba(84,163,238,1) 61%,rgba(30,105,222,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(109,179,242,1) 0%,rgba(54,144,240,1) 32%,rgba(84,163,238,1) 61%,rgba(30,105,222,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.main-header {
+    width: 50vw;
+    color: #fff;
+    text-shadow: 1px 1px 5px black;
+    font-size: 2rem;
+    font-family: "Vollkorn SC", Colibri, Arial, sans-serif; 
+    font-size: 320%;
+    line-height: 140%;
+    margin: 2% auto 6% auto;
+    text-align: center;
+    text-shadow: 0px 0px 2px white, 0px 0px 5px black;
+}
+.container__form {
+    margin: 0 2rem;
+    padding: 10px;
+    width: 50vw;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid aliceblue;
+    border-radius: 5px;
+    -moz-box-shadow: -2px 1px 15px black;
+    -webkit-box-shadow: -2px 1px 15px black;
+    box-shadow: -2px 1px 15px black;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;    
+    background-color: #296DAD;
+}
+.container__form__fieldset {
+    height: inherit;
+    width: inherit;
+    margin: 0 auto;
+    border: none;
+}
+.container__form__legend {
+    height: inherit;
+    width: inherit;
+    margin: 0 auto;
+    border: none;
+}
+.container__form__txtinput {
+    margin-top: 2%;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Vollkorn SC", Colibri, Arial, sans-serif; 
+}
+.container__form__submit {
+    margin-top: 1rem;
+    border-radius: 3px;
+    font-family: "Vollkorn SC", Colibri, Arial, sans-serif; 
+}
+.container__form__ul {
+    -moz-column-count: 7;
+    -webkit-column-count: 7;
+    column-count: 3;
+    -moz-column-fill: balance;
+    -webkit-column-fill: balance;
+    column-fill: balance;
+    overflow: auto;
+    color: #ccc;
+    text-shadow: -2px 2px 3px black, 0px 0px 1px black;
+}
+.container__resultLabel {
+    font-family: "Vollkorn SC", Colibri, Arial, sans-serif; 
+    color: #bbb;
+    text-shadow: 0px 0px 1px black, -1px 2px 1px black, 0px 0px 1px black;
+}
+.coreWord, .coreNr {
+    font-weight: 700;
+    color: #bbb;
+    text-shadow: 0px 0px 1px white, -1px 2px 1px black, 0px 0px 1px white;
+}
+.coreNr {
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 1px white, -1px 2px 1px black, 0px 0px 1px white;
+}
+.container__results {
+    display: block;
+}
+.codedby {
+    font-size: 8px;
+    color: #bbb;
+    margin: 0 auto;
+    text-align: center;
+    text-shadow: -2px 2px 3px black;
+}
+a {
+    text-decoration: none;
+    color:#bbb;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+a:visited {
+    text-decoration: none;
+    color:#bbb;
+}
+a:hover {
+    color: cyan;
+}
