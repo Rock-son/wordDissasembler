@@ -20912,12 +20912,15 @@ var FCC_Global =
 	        this.timeout(2500);
 	        // start the pomodoro
 	        (0, _elementUtils.clickButtonsById)([startStop]);
-	        var secondsBefore = getSeconds(document.getElementById('time-left').innerHTML);
+			var secondsBefore = getSeconds(document.getElementById('time-left').innerHTML);
+			console.log("seconds before: ", secondsBefore);
 	        return new Promise(function (resolve, reject) {
 	          // wait 1.5 seconds then see if displayed time has changed
 	          // (decremented)
 	          setTimeout(function () {
-	            var secondsAfter = getSeconds(document.getElementById('time-left').innerHTML);
+				var secondsAfter = getSeconds(document.getElementById('time-left').innerHTML);
+				console.log("seconds after: ", secondsAfter);
+				console.log(secondsBefore, " > ", secondsAfter);
 	            if (secondsAfter > secondsBefore) {
 	              resolve();
 	            } else {
