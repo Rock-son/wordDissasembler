@@ -19722,7 +19722,7 @@ var FCC_Global =
 /* 49 */
 /***/ (function(module, exports) {
 
-	
+
 	/**
 	 * When source maps are enabled, `style-loader` uses a link element with a data-uri to
 	 * embed the css on the page. This breaks all relative urls because now they are relative to a
@@ -20650,12 +20650,12 @@ var FCC_Global =
 	  }
 
 	  function getMinutes(str) {
-	    var matches = /^(\d{1,4})\s?([\.:,\/]\s?\d{2}.*)?$/g.exec(str);
+	    var matches = /^\s?(?:<!--.*-->)?(\d{1,4})\s?([\.:,\/]\s?\d{2}.*)?$/g.exec(str);
 	    return matches[1];
 	  }
 
 	  function getSeconds(str) {
-	    var matches = /^\d{1,4}\s?:\s?(\d{2})/g.exec(str);
+	    var matches = /^\s?(?:<!--.*-->)?\d{1,4}\s?:\s?(\d{2})/g.exec(str);
 	    return matches[1];
 	  }
 
