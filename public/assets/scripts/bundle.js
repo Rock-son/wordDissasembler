@@ -20913,13 +20913,13 @@ var FCC_Global =
 	        // start the pomodoro
 	        (0, _elementUtils.clickButtonsById)([startStop]);
 			var secondsBefore = getSeconds(document.getElementById('time-left').innerHTML);
-			console.log("seconds before: ", document.getElementById('time-left').innerHTML);
+			console.log("seconds before: ", new Date().getTime(), document.getElementById('time-left').innerHTML);
 	        return new Promise(function (resolve, reject) {
 	          // wait 1.5 seconds then see if displayed time has changed
 	          // (decremented)
 	          setTimeout(function () {
 				var secondsAfter = getSeconds(document.getElementById('time-left').innerHTML);
-				console.log("seconds after: ", document.getElementById('time-left').innerHTML);
+				console.log("seconds after: ", new Date().getTime(), document.getElementById('time-left').innerHTML);
 	            if (secondsAfter > secondsBefore) {
 	              resolve();
 	            } else {
