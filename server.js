@@ -49,6 +49,9 @@ app.get("/", function(req, res) {
     res.render("index", {matches: 0, nr: -1});
 });
 
+app.get("/assets/scripts/bundle.js", function(req, res) {
+	res.sendFile(path.join(__dirname, "assets/scripts/bundle.js"));
+});
 
 app.get("/public/assets/fonts/*", function(req, res) {
     if (fontArr.indexOf(req.url.replace(/^public\/assets\/fonts\//, "") > -1)) {
@@ -61,7 +64,7 @@ app.get("/public/assets/fonts/*", function(req, res) {
 
 app.post("/wordLookup", function(req, res) {
     const isMobile = /\((.*)\)/.exec(req.headers["user-agent"])[0].replace(/\(/, "").replace(/\)/, "").indexOf("Android") > -1;
-    
+
     const matches = dictionaire.getWords(req.body.wordUpload);
     // when no search was found
     if (matches.length === 0) {
@@ -69,7 +72,7 @@ app.post("/wordLookup", function(req, res) {
     } else if (matches[0] === "There was an error") {
         res.render("index", {matches: "error", isMobile});
     } else {
-		res.render("index", { matches, nr: matches.length, word: req.body.wordUpload, isMobile });		
+		res.render("index", { matches, nr: matches.length, word: req.body.wordUpload, isMobile });
     }
 });
 
